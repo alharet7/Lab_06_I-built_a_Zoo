@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_06_I_built_a_Zoo
 {
-    public class Bear : Mammals
+    public class Bear : Mammals, IPlay
     {
         public override string Name { get; set; }
         public override double Age { get; set; }
@@ -45,6 +45,11 @@ namespace Lab_06_I_built_a_Zoo
         public string Color()
         {
             return $"{Name} color is {Colors}";
+        }
+
+        public string Play()
+        {
+            return $"{Name} can play with you but be careful!";
         }
     }
 }

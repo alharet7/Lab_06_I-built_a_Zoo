@@ -1,3 +1,4 @@
+using System.Xml.Linq;
 using Xunit;
 
 namespace Lab_06_I_built_a_Zoo.Tests
@@ -129,5 +130,81 @@ namespace Lab_06_I_built_a_Zoo.Tests
             // Assert
             Assert.Equal("Sparo the Parrot in the Zoo can speak with people in English", result);
         }
+        // --------------------- Lab 07 Tests----------------------------------------------------------------
+        [Fact]
+        public void ParrotDoIAttackAndIPlay()
+        {
+            // Arrange
+            Parrot parrot = new Parrot("Sparo", 2, 3, false, "small");
+            // Assert
+            Assert.IsAssignableFrom<IAttack>(parrot);
+            Assert.IsAssignableFrom<IPlay>(parrot);
+        }
+        [Fact]
+        public void BearDoIPlay()
+        {
+            // Arrange
+            Bear bear = new Bear("Polo", 9, 150, true);
+            // Assert
+            Assert.IsAssignableFrom<IPlay>(bear);
+        }
+        [Fact]
+        public void ElephantDoIAttack()
+        {
+            // Arrange
+            Elephant elephant = new Elephant("Babar", 6, 300, false);
+            // Assert
+            Assert.IsAssignableFrom<IAttack>(elephant);
+        }
+        [Fact]
+        public void TigerDoIAttack()
+        {
+            // Arrange
+            Tiger tiger = new Tiger("Sharikhan", 7, 143, true);
+            // Assert
+            Assert.IsAssignableFrom<IAttack>(tiger);
+        }
+        [Fact]
+        public void FalconDoIAttack()
+        {
+            // Arrange
+            Falcon falcon = new Falcon("Hakeem", 3, 45.3, true, "meduim");
+            // Assert
+            Assert.IsAssignableFrom<IAttack>(falcon);
+        }
+
+        [Fact]
+        public void InheritanceTest() //Test inheritance
+        {
+            // Arrange
+            Tiger tiger = new Tiger("Sharikhan", 7, 143, true);
+            // Assert
+            // Test that the Tiger object has inherited the properties from the Mammal class
+            Assert.Equal("Sharikhan", tiger.Name);
+            Assert.Equal(7, tiger.Age);
+            Assert.Equal(143, tiger.Weight);
+            Assert.Equal(true, tiger.Predatory);
+
+            // Test that the Tiger object has inherited the methods from the Animal class
+            Assert.Equal("Sharikhan eats meat", tiger.Eat());
+            Assert.Equal(7, tiger.Sleep());
+        }
+        [Fact]
+        public void PolymorphismTest()
+        {
+            // Arrange
+            Elephant elephant = new Elephant("Babar", 6, 300, false);
+            // Assert
+            Assert.Equal("Babar eats herbs and trees", elephant.Eat());
+            Assert.Equal(6, elephant.Sleep());
+        }
+        [Fact]
+        public void FalconIsAnimal() //concrete animals is an Animal
+        {
+            Falcon falcon = new Falcon("Hakeem", 3, 45.3, true, "meduim");
+
+            Assert.IsAssignableFrom<Animal>(falcon);
+        }
+
     }
 }
