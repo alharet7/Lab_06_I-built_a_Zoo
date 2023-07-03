@@ -1,6 +1,6 @@
 ﻿# I built a Zoo! 🌿✨
-
-- In this project I built a zoo with a base class Animals, after that, I built two classes inherit from the base class first one is Mammals and the second one is birds. In the Mammals class. I put three animals that are inherited from the Mammals class and from the Animals class and in the Birds class I put two birds, a Parrot, and a Falcon, and each of them is Inherent from the Birds class and Animals class.
+### [You can check the completed project lab06+lab07 from HERE](https://github.com/alharet7/Lab_06_I-built_a_Zoo/blob/master/README07.md)
+- In this project, I built a zoo with a base class Animals, after that, I built two classes inherit from the base class first one is Mammals and the second one is birds. In the Mammals class. I put three animals that are inherited from the Mammals class and from the Animals class and in the Birds class I put two birds, a Parrot, and a Falcon, and each of them is Inherent from the Birds class and Animals class.
 ---
 
 ## Digital UML drawing of my zoo
