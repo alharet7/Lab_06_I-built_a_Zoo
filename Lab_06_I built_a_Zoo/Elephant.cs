@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_06_I_built_a_Zoo
 {
-    public class Elephant : Mammals
+    public class Elephant : Mammals, IAttack
     {
         public override string Name { get; set; }
         public override double Age { get; set; }
@@ -40,6 +40,11 @@ namespace Lab_06_I_built_a_Zoo
         public string ElephantHeight()
         {
             return $"{Name} color is {Height}";
+        }
+
+        public string MightAttack()
+        {
+            return $"{Name} Calm, and does not attack.";
         }
     }
 }

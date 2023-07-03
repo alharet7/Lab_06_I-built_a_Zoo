@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_06_I_built_a_Zoo
 {
-    public class Tiger : Mammals
+    public class Tiger : Mammals, IAttack
     {
         public override string Name { get; set; }
         public override double Age { get; set; }
@@ -43,6 +43,11 @@ namespace Lab_06_I_built_a_Zoo
         public string TigerType()
         {
             return $"{Name} color is {Type}";
+        }
+
+        public string MightAttack()
+        {
+            return $"{Name} can attack be careful!!";
         }
     }
 }

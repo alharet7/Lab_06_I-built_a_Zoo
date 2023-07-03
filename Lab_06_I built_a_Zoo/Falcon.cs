@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_06_I_built_a_Zoo
 {
-    public class Falcon : Birds
+    public class Falcon : Birds, IAttack
     {
         public override string Name { get; set; }
         public override double Age { get; set; }
@@ -39,6 +39,11 @@ namespace Lab_06_I_built_a_Zoo
         public override string Fly()
         {
             return "Hakeem the Falcon can fly inside the cage";
+        }
+
+        public string MightAttack()
+        {
+            return $"{Name} can attack so please keep away!!!";
         }
     }
 }
